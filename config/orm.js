@@ -11,3 +11,23 @@ let orm = {
         cb(res);
       });
     },
+
+    insertOne: function(table, cols, vals, cb) {
+        var dbQuery =
+          "INSERT INTO " +
+          table +
+          " (" +
+          cols.toString() +
+          ") " +
+          "VALUES (" +
+          createQmarks(vals.length) +
+          ") ";
+    
+        console.log(dbQuery);
+        connection.query(dbQuery, vals, function(err, res) {
+          if (err) {
+            throw err;
+          }
+          cb(res);
+        });
+      },
