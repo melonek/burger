@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS k6fe5zuaze4rfcwf;
-CREATE DATABASE k6fe5zuaze4rfcwf;
-USE k6fe5zuaze4rfcwf;
+DROP DATABASE IF EXISTS burgers_db;
+CREATE DATABASE burgers_db;
+USE burgers_db;
 
 DROP TABLE IF EXISTS burgers;
 
