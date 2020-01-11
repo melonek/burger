@@ -1,5 +1,13 @@
 let connection = require("../config/connection");
 
+function createQmarks(num) {
+  var arr = [];
+  for (var i = 0; i < num; i++) {
+    arr.push("?");
+  }
+  return arr.toString();
+}
+
 function translateSql(ob) {
   var arr = [];
   for (var key in ob) {
