@@ -31,3 +31,22 @@ let orm = {
           cb(res);
         });
       },
+
+      updateOne: function(table, objColVals, condition, cb) {
+        var dbQuery =
+          "UPDATE " +
+          table +
+          " SET " +
+          translateSql(objColVals) +
+          " WHERE " +
+          condition;
+    
+        console.log(dbQuery);
+    
+        connection.query(dbQuery, function(err, res) {
+          if (err) {
+            throw err;
+          }
+          cb(res);
+        });
+      },
